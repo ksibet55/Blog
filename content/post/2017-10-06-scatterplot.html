@@ -1,0 +1,38 @@
+---
+title: Scatterplot
+author: Kayla Sibeto
+date: '2017-10-06'
+slug: scatterplot
+categories:
+  - R
+tags:
+  - Scatterplot
+---
+
+
+
+<p>Scatterplot-Example: Look at career Homeruns and career strikeouts</p>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.2</code></pre>
+<pre class="r"><code>library(sqldf)</code></pre>
+<pre><code>## Warning: package &#39;sqldf&#39; was built under R version 3.4.2</code></pre>
+<pre><code>## Loading required package: gsubfn</code></pre>
+<pre><code>## Warning: package &#39;gsubfn&#39; was built under R version 3.4.2</code></pre>
+<pre><code>## Loading required package: proto</code></pre>
+<pre><code>## Warning: package &#39;proto&#39; was built under R version 3.4.2</code></pre>
+<pre><code>## Loading required package: RSQLite</code></pre>
+<pre><code>## Warning: package &#39;RSQLite&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.2</code></pre>
+<pre class="r"><code>query&lt;-&quot;SELECT playerID,sum(HR) AS career_HR,sum(SO) AS career_SO
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)&gt;=400&quot;
+result&lt;-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=career_SO,y=career_HR))+
+  ggtitle(&quot;Career strikeouts Vs. Homeruns for Great Hitters&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-10-06-scatterplot_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
