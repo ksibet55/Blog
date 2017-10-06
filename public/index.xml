@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Barplots</title>
+      <link>https://kaylasblog.netlify.com/post/barplots/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaylasblog.netlify.com/post/barplots/</guid>
+      <description>Barplot-Example: Names from every team in 1980 and number of homeruns hit
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.2library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.2## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.2## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.4.2## Loading required package: RSQLite## Warning: package &amp;#39;RSQLite&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
       <title>Histograms</title>
       <link>https://kaylasblog.netlify.com/post/histograms/</link>
       <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
