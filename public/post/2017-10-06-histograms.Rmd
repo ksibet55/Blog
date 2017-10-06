@@ -1,0 +1,29 @@
+---
+title: Histograms
+author: Kayla Sibeto
+date: '2017-10-06'
+slug: histograms
+categories:
+  - R
+tags:
+  - Histograms
+---
+
+Histogram(Looks at one column of data-Example:
+Look at body weights of baseball layers
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+
+
+query<-"SELECT weight
+FROM Master"
+
+result<-sqldf(query)
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue", fill="white", bins=50)+
+  ggtitle("Body-Weight Distribution fot Baseball Players")
+```
+
