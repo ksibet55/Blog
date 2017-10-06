@@ -33,6 +33,17 @@ library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R v
     </item>
     
     <item>
+      <title>Time Series</title>
+      <link>https://kaylasblog.netlify.com/post/time-series/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaylasblog.netlify.com/post/time-series/</guid>
+      <description>Time Series-Example:
+Every year Babe Ruth player and the number of homeruns he hit in each year
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.2library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.2## Loading required package: gsubfn## Warning: package &amp;#39;gsubfn&amp;#39; was built under R version 3.4.2## Loading required package: proto## Warning: package &amp;#39;proto&amp;#39; was built under R version 3.4.2## Loading required package: RSQLite## Warning: package &amp;#39;RSQLite&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
       <title>Hello R Markdown</title>
       <link>https://kaylasblog.netlify.com/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>

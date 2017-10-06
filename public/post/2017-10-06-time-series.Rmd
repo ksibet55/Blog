@@ -1,0 +1,33 @@
+---
+title: Time Series
+author: Kayla Sibeto
+date: '2017-10-06'
+slug: time-series
+categories:
+  - R
+tags:
+  - Time Series
+---
+Time Series-Example:
+
+Every year Babe Ruth player and the number of homeruns he hit in each year
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+
+
+query<-"SELECT yearID, HR
+FROM Batting
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Ruth's Homerun Totals Throughout the Years")+
+  xlab("years")+
+  ylab("homeruns")
+```
+
